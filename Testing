@@ -59,11 +59,12 @@ Label:
     ADVANCE();
   }
   }
-   if CATCH (13-14）
-   if (<13){
+  if (distance_front_left_cm<13|| distance_front_right_cm<13) {
       BACK();
       goto Label;
 }
+  if CATCH (13-14）{
+  
 }
 void ReleaseAction(){
 
