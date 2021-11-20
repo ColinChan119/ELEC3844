@@ -1,0 +1,96 @@
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void FindAction(){
+  while( window_size ==0){
+    if (distance_right_in_cm <20){
+      while (( distance_left_in_cm >=20)|| window_size==0){
+        LEFT_2();
+      }
+    }
+    else if ( distance_left_in_cm <20){
+      RIGHT_2();
+    }
+    else if (distance_difference <2){
+      ADVANCE();
+      delay(1500);
+      while (( distance_right_in_cm >=20)|| window_size==0){
+        RIGHT_2();
+      }
+    }
+  }
+ STOP();
+ delay(1500);
+ while(pan!=90){
+  if (pan>90){
+    LEFT_2();
+   }
+  else if (pan<90){
+    RIGHT_2();
+  }
+ }
+}
+
+void clipAction(){
+Label:
+  while (distance >= 15) {
+  ADVANCE()
+  delay(500);
+  if distance difference >1{
+  while ( pan!=90){
+    if (pan >90){
+    rotate left}
+    else if (pan<90){
+    rotate right}}
+  STOP();
+  delay(200);}
+  else if distance difference <-1{
+    while ( pan!=90){
+    if (pan >90){
+    rotate left}
+    else if (pan<90){
+    rotate right}}
+    STOP();
+    delay(200);
+  }
+  else{
+    ADVANCE();
+  }
+  }
+   if CATCH (13-14）
+   if (<13){
+      BACK();
+      goto Label;
+}
+}
+void ReleaseAction(){
+
+  while (window_size>0){
+    ADVANCE()
+  }
+  down
+  servo1 open
+  }
+  
+
+void loop() {
+  if readvoice=='find object'{
+  
+    while (clip_distance >100){ //catch fail
+      FindAction(); //find toy
+      clipAction(); //try to catch
+    }
+    while( window_size==0){ //try to find gaol
+        randommove();}
+    ReleaseAction();
+     exit(0);} // stop everthing
+}
+   
+    
+   
+       
+    
+  
+  
