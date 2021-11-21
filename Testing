@@ -36,7 +36,7 @@ Find:
 
 void clipAction(){
 Label:
-  while (distance >= 15) {
+ if(distance >= 15) {
   ADVANCE()
   delay(500);
   if distance difference >1{
@@ -59,7 +59,7 @@ Label:
   else{
     ADVANCE();
   }
-  }
+  goto Label;}
   if (distance_front_left_cm<13|| distance_front_right_cm<13) {
       BACK();
       goto Label;
