@@ -4,7 +4,8 @@ void setup() {
 }
 
 void FindAction(){
-  while( window_size ==0){
+Find:  
+  if (window_size ==0){
     if (distance_right_in_cm <20){
       while (( distance_left_in_cm >=20)|| window_size==0){
         LEFT_2();
@@ -20,7 +21,7 @@ void FindAction(){
         RIGHT_2();
       }
     }
-  }
+  goto Find;}
  STOP();
  delay(1500);
  while(pan!=90){
